@@ -1,6 +1,6 @@
 # Project Images
 
-![alt text](https://github.com/aliahmed200/cv-builder/blob/new-version/src/Assets/1.png?raw=true)
+![alt text](https://github.com/aliahmed200/simple-Alert-Project/blob/main/src/Assets/Alert.png?raw=true)
 
 
 ## react.js Alert Project 🌟
