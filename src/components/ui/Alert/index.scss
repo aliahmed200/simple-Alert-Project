@@ -1,0 +1,76 @@
+//danger
+$bgErrorColor: rgb(192 29 29/15%);
+$colorErorr: #ef8d8dfa;
+$borderErrorColor: rgba(255, 25, 0, 0.322);
+//default
+$bgDefaultColor: rgba(29 31 32/ 71%);
+$colorDefault: #c8c8c8;
+$borderDefaultColor: #c8c8c8;
+//info
+$bgInfoColor: rgba(100 108 255/ 8%);
+$colorInfo: #bcc0ff;
+$borderInfoColor: #b46cff;
+//success
+$bgSuccessColor: rgba(246, 238, 9, 0.127);
+$colorSuccess: #7acf58d6;
+$borderSuccessColor: rgba(0, 255, 0, 0.322);
+
+@mixin themeAlert($borderColor, $bgError, $Color, $alertName) {
+  .#{$alertName} {
+    border: 2px dotted $borderColor;
+    border-radius: 0.8rem;
+    padding: 1.3rem;
+    background-color: $bgError;
+    color: $Color;
+    margin-bottom: 1rem;
+
+    .alert-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1.2rem;
+
+      .alert-title {
+        display: flex;
+        align-items: center;
+        font-size: 1.3rem;
+
+        span svg {
+          margin-right: 0.6rem;
+        }
+      }
+
+      .close {
+        cursor: pointer;
+      }
+    }
+    p {
+      font-size: 0.9;
+      font-weight: 500;
+      line-height: 1.5rem;
+    }
+  }
+  a {
+    color: #9499ff;
+    padding-inline: 0.2rem;
+  }
+}
+@include themeAlert(
+  $borderDefaultColor,
+  $bgDefaultColor,
+  $colorDefault,
+  "alert-default"
+);
+@include themeAlert(
+  $borderErrorColor,
+  $bgErrorColor,
+  $colorErorr,
+  "alert-danger"
+);
+@include themeAlert($borderInfoColor, $bgInfoColor, $colorInfo, "alert-info");
+@include themeAlert(
+  $borderSuccessColor,
+  $bgSuccessColor,
+  $colorSuccess,
+  "alert-success"
+);
